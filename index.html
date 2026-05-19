@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Guanaco's — Alojamientos Turísticos en El Salvador</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
+
+  <!-- ═══════════════════ NAVBAR ═══════════════════ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#hero" class="nav-logo">
+        <span class="logo-icon">🧳</span>
+        <span>Guanaco's Alojamiento Turístico</span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#nosotros" class="nav-link">Nosotros</a></li>
+        <li><a href="#servicios" class="nav-link">Servicios</a></li>
+        <li><a href="#habitaciones" class="nav-link">Habitaciones</a></li>
+        <li><a href="#tarifas" class="nav-link">Tarifas</a></li>
+        <li><a href="#reserva" class="nav-link nav-cta">Reservar</a></li>
+      </ul>
+
+      <button class="hamburger" id="hamburger" aria-label="Menú" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════ HERO ═══════════════════ -->
+  <section class="hero" id="hero">
+    <div class="hero-bg">
+      <div class="hero-overlay"></div>
+      <div class="hero-pattern"></div>
+    </div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow">El Salvador · Centroamérica</p>
+      <h2 class="hero-title">
+        Playa, Montaña, Lagos, Volcanes<br/>
+        <em>Cerquita de tí</em>
+      </h2>
+      <p class="hero-subtitle">
+        Cabañas en el volcán, glamping bajo las estrellas, hostales boutique<br/>
+         frente al mar. Descubre El Salvador como nunca antes lo has vivido.
+      </p>
+      
+
+    <div class="hero-badges">
+      <div class="badge"><span class="badge-num">12+</span><span class="badge-label">Propiedades</span></div>
+      <div class="badge"><span class="badge-num">500+</span><span class="badge-label">Huéspedes felices</span></div>
+      <div class="badge"><span class="badge-num">4.9★</span><span class="badge-label">Calificación</span></div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ NOSOTROS ═══════════════════ -->
+  <section class="nosotros section" id="nosotros">
+    <div class="container">
+      <div class="nosotros-grid">
+        <div class="nosotros-images">
+          <div class="img-stack">
+            <div class="img-card img-card--main">
+              <img src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?w=600&q=80" alt="Cabaña en volcán salvadoreño" loading="lazy"/>
+            </div>
+            <div class="img-card img-card--accent">
+              <img src="https://images.unsplash.com/photo-1540979388789-6cee28a1cdc9?w=400&q=80" alt="Glamping en El Salvador" loading="lazy"/>
+            </div>
+            <div class="img-float">
+              <span class="float-icon">🌺</span>
+              <span class="float-text">Desde 2018</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="nosotros-text">
+          <p class="section-eyebrow">Nuestra Historia</p>
+          <h2 class="section-title">El alma de El Salvador, en cada alojamiento</h2>
+          <p class="body-text">
+            Somos una red de alojamientos boutique que nació del amor por El Salvador. Desde los diferentes <strong>Volcanes de nuestro país</strong> hasta las bellas costas, cada propiedad es elegida por su conexión única con el entorno natural y su autenticidad cultural.
+          </p>
+          <p class="body-text">
+            Trabajamos con familias locales, artesanos y guías comunitarios para ofrecerte experiencias genuinas: no eres un turista, eres un visitante bienvenido en nuestra tierra.
+          </p>
+          <div class="valores">
+            <div class="valor">
+              <span class="valor-icon">🌿</span>
+              <div>
+                <strong>Ecoresponsable</strong>
+                <p>Energía solar y materiales locales</p>
+              </div>
+            </div>
+            <div class="valor">
+              <span class="valor-icon">🤝</span>
+              <div>
+                <strong>Turismo comunitario</strong>
+                <p>Empleo y beneficio local directo</p>
+              </div>
+            </div>
+            <div class="valor">
+              <span class="valor-icon">✨</span>
+              <div>
+                <strong>Experiencias únicas</strong>
+                <p>Cada estadía es irrepetible</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ SERVICIOS ═══════════════════ -->
+  <section class="servicios section" id="servicios">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Lo que ofrecemos</p>
+        <h2 class="section-title">Servicios que marcan la diferencia</h2>
+        <p class="section-desc">Más allá de un lugar donde dormir, te ofrecemos una experiencia completa</p>
+      </div>
+
+      <div class="servicios-grid">
+        <div class="servicio-card">
+          <div class="servicio-icon">🏕️</div>
+          <h3>Glamping Ecológico</h3>
+          <p>Carpas de lujo equipadas con camas queen, iluminación ambiental y vistas panorámicas al volcán o al océano.</p>
+          <span class="servicio-tag">Naturaleza</span>
+        </div>
+        <div class="servicio-card">
+          <div class="servicio-icon">🏡</div>
+          <h3>Cabañas Privadas</h3>
+          <p>Cabañas de madera y adobe con jacuzzi exterior, cocina equipada y terraza privada entre cafetales centenarios.</p>
+          <span class="servicio-tag">Privacidad</span>
+        </div>
+        <div class="servicio-card">
+          <div class="servicio-icon">🏨</div>
+          <h3>Hotel Boutique</h3>
+          <p>Habitaciones de diseño con elementos artesanales salvadoreños, desayuno incluido y acceso al spa natural.</p>
+          <span class="servicio-tag">Lujo</span>
+        </div>
+        <div class="servicio-card">
+          <div class="servicio-icon">🌊</div>
+          <h3>Hostales de Playa</h3>
+          <p>Alojamiento frente al mar con acceso directo a las mejores olas del Pacífico para surf y descanso.</p>
+          <span class="servicio-tag">Playa</span>
+        </div>
+        <div class="servicio-card">
+          <div class="servicio-icon">🍽️</div>
+          <h3>Gastronomía Local</h3>
+          <p>Desayunos con productos de la finca, cenas maridadas con vino artesanal y clases de cocina salvadoreña.</p>
+          <span class="servicio-tag">Sabores</span>
+        </div>
+        <div class="servicio-card">
+          <div class="servicio-icon">🧘</div>
+          <h3>Bienestar & Spa</h3>
+          <p>Yoga al amanecer, masajes con aceites locales, baños de vapor volcánico y meditación en la naturaleza.</p>
+          <span class="servicio-tag">Bienestar</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ HABITACIONES ═══════════════════ -->
+  <section class="habitaciones section" id="habitaciones">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Nuestros Espacios</p>
+        <h2 class="section-title">Habitaciones & Alojamientos</h2>
+        <p class="section-desc">Cada espacio ha sido diseñado con amor y atención al detalle</p>
+      </div>
+
+      <div class="rooms-grid">
+        <!-- Room 1 -->
+        <div class="room-card" data-room="glamping">
+          <div class="room-img-wrap">
+            <img src="https://images.unsplash.com/photo-1504280390367-361c6d9f38f4?w=700&q=80" alt="Glamping volcán" loading="lazy"/>
+            <span class="room-badge">Más solicitado</span>
+            <div class="room-overlay">
+              <a href="#reserva" class="btn btn-primary btn-sm">Reservar ahora</a>
+            </div>
+          </div>
+          <div class="room-info">
+            <div class="room-meta">
+              <span class="room-type">🏕️ Glamping</span>
+              <span class="room-capacity">👥 2 personas</span>
+            </div>
+            <h3>Carpa Volcán Santa Ana</h3>
+            <p>Glamping de lujo a 2,000 metros de altura con vista al lago de Coatepeque. Cama king, baño privado y desayuno incluido.</p>
+            <div class="room-amenities">
+              <span>☕ Desayuno</span>
+              <span>🛁 Baño privado</span>
+              <span>🔥 Fogata</span>
+              <span>📡 WiFi</span>
+            </div>
+            <div class="room-price">
+              <span class="price-from">Desde</span>
+              <span class="price-amount">$85</span>
+              <span class="price-night">/noche</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 2 -->
+        <div class="room-card" data-room="cabana">
+          <div class="room-img-wrap">
+            <img src="https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=700&q=80" alt="Cabaña boutique" loading="lazy"/>
+            <div class="room-overlay">
+              <a href="#reserva" class="btn btn-primary btn-sm">Reservar ahora</a>
+            </div>
+          </div>
+          <div class="room-info">
+            <div class="room-meta">
+              <span class="room-type">🏡 Cabaña</span>
+              <span class="room-capacity">👥 4 personas</span>
+            </div>
+            <h3>Cabaña en los Cafetales</h3>
+            <p>Cabaña privada rodeada de cafetales con jacuzzi exterior, cocina completa y terraza con hamacas bajo el cielo estrellado.</p>
+            <div class="room-amenities">
+              <span>🛁 Jacuzzi</span>
+              <span>🍳 Cocina</span>
+              <span>🌿 Jardín</span>
+              <span>🚗 Parking</span>
+            </div>
+            <div class="room-price">
+              <span class="price-from">Desde</span>
+              <span class="price-amount">$120</span>
+              <span class="price-night">/noche</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 3 -->
+        <div class="room-card" data-room="boutique">
+          <div class="room-img-wrap">
+            <img src="https://images.unsplash.com/photo-1582719478250-c89cae4dc85b?w=700&q=80" alt="Hotel boutique" loading="lazy"/>
+            <div class="room-overlay">
+              <a href="#reserva" class="btn btn-primary btn-sm">Reservar ahora</a>
+            </div>
+          </div>
+          <div class="room-info">
+            <div class="room-meta">
+              <span class="room-type">🏨 Boutique</span>
+              <span class="room-capacity">👥 2 personas</span>
+            </div>
+            <h3>Suite Artesanal Boutique</h3>
+            <p>Suite de diseño con decoración artesanal salvadoreña, cama king, terraza privada y acceso al spa con baños termales naturales.</p>
+            <div class="room-amenities">
+              <span>🧖 Spa</span>
+              <span>☕ Desayuno</span>
+              <span>🌅 Vista</span>
+              <span>📺 Smart TV</span>
+            </div>
+            <div class="room-price">
+              <span class="price-from">Desde</span>
+              <span class="price-amount">$150</span>
+              <span class="price-night">/noche</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Room 4 -->
+        <div class="room-card" data-room="hostal">
+          <div class="room-img-wrap">
+            <img src="https://images.unsplash.com/photo-1566073771259-6a8506099945?w=700&q=80" alt="Hostal de playa" loading="lazy"/>
+            <span class="room-badge room-badge--green">Surf spot</span>
+            <div class="room-overlay">
+              <a href="#reserva" class="btn btn-primary btn-sm">Reservar ahora</a>
+            </div>
+          </div>
+          <div class="room-info">
+            <div class="room-meta">
+              <span class="room-type">🌊 Hostal</span>
+              <span class="room-capacity">👥 1–2 personas</span>
+            </div>
+            <h3>Hostal Frente al Mar</h3>
+            <p>Habitación privada a metros del océano con acceso directo a la playa, tablas de surf disponibles y piscina infinity al atardecer.</p>
+            <div class="room-amenities">
+              <span>🏄 Surf</span>
+              <span>🏊 Piscina</span>
+              <span>🌅 Atardecer</span>
+              <span>🍹 Bar</span>
+            </div>
+            <div class="room-price">
+              <span class="price-from">Desde</span>
+              <span class="price-amount">$65</span>
+              <span class="price-night">/noche</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ TARIFAS ═══════════════════ -->
+  <section class="tarifas section" id="tarifas">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Planes & Precios</p>
+        <h2 class="section-title">Tarifas Transparentes</h2>
+        <p class="section-desc">Sin cargos ocultos · Desayuno incluido en todos los planes</p>
+      </div>
+
+      <div class="tarifas-grid">
+        <div class="tarifa-card">
+          <div class="tarifa-header">
+            <span class="tarifa-icon">🌿</span>
+            <h3>Escapada</h3>
+            <p>1–2 noches</p>
+          </div>
+          <div class="tarifa-price">
+            <span>Desde</span>
+            <strong>$65</strong>
+            <span>/noche</span>
+          </div>
+          <ul class="tarifa-features">
+            <li>✓ Habitación estándar</li>
+            <li>✓ Desayuno para 2</li>
+            <li>✓ WiFi de alta velocidad</li>
+            <li>✓ Parking gratuito</li>
+            <li class="muted">✗ Tours incluidos</li>
+            <li class="muted">✗ Transfer aeropuerto</li>
+          </ul>
+          <a href="#reserva" class="btn btn-outline">Reservar</a>
+        </div>
+
+        <div class="tarifa-card tarifa-card--featured">
+          <div class="tarifa-popular">Más popular</div>
+          <div class="tarifa-header">
+            <span class="tarifa-icon">🌺</span>
+            <h3>Experiencia</h3>
+            <p>3–5 noches</p>
+          </div>
+          <div class="tarifa-price">
+            <span>Desde</span>
+            <strong>$95</strong>
+            <span>/noche</span>
+          </div>
+          <ul class="tarifa-features">
+            <li>✓ Habitación superior</li>
+            <li>✓ Desayuno + cena</li>
+            <li>✓ WiFi ilimitado</li>
+            <li>✓ Parking + bicicletas</li>
+            <li>✓ 1 tour guiado incluido</li>
+            <li class="muted">✗ Transfer aeropuerto</li>
+          </ul>
+          <a href="#reserva" class="btn btn-primary">Reservar ahora</a>
+        </div>
+
+        <div class="tarifa-card">
+          <div class="tarifa-header">
+            <span class="tarifa-icon">✨</span>
+            <h3>Inmersión</h3>
+            <p>7+ noches</p>
+          </div>
+          <div class="tarifa-price">
+            <span>Desde</span>
+            <strong>$75</strong>
+            <span>/noche</span>
+          </div>
+          <ul class="tarifa-features">
+            <li>✓ Cabaña o suite premium</li>
+            <li>✓ Pensión completa</li>
+            <li>✓ Todo incluido</li>
+            <li>✓ 3 tours guiados</li>
+            <li>✓ Transfer aeropuerto</li>
+            <li>✓ Sesión de spa diaria</li>
+          </ul>
+          <a href="#reserva" class="btn btn-outline">Reservar</a>
+        </div>
+      </div>
+
+      <p class="tarifas-note">* Tarifas por noche para 2 personas en temporada regular. Consulte disponibilidad para temporada alta (Semana Santa, Navidad, Año Nuevo). Descuentos especiales para grupos de más de 6 personas.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FORMULARIO ═══════════════════ -->
+  <section class="reserva section" id="reserva">
+    <div class="reserva-bg"></div>
+    <div class="container">
+      <div class="reserva-grid">
+        <div class="reserva-info">
+          <p class="section-eyebrow">¿Listo para viajar?</p>
+          <h2 class="section-title">Haz tu Reservación</h2>
+          <p class="body-text">Completa el formulario y nos pondremos en contacto contigo en menos de 24 horas para confirmar disponibilidad y personalizar tu estadía.</p>
+          
+          <div class="contact-items">
+            <div class="contact-item">
+              <span class="contact-icon">📍</span>
+              <div>
+                <strong>Oficina Central</strong>
+                <p>Santo Tomás, El Salvador</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📞</span>
+              <div>
+                <strong>WhatsApp</strong>
+                <p>+503 7858-2246</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">✉️</span>
+              <div>
+                <strong>Correo</strong>
+                <p>queli1801@gmail.com</p>
+              </div>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">🕐</span>
+              <div>
+                <strong>Horario</strong>
+                <p>Lun–Sáb · 8:00 AM – 6:00 PM</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="form-wrap">
+          <form id="reservaForm" class="reserva-form" novalidate>
+            <div class="form-row">
+              <div class="form-group">
+                <label for="nombre">Nombre completo <span class="req">*</span></label>
+                <input type="text" id="nombre" name="nombre" placeholder="Ej: María López" autocomplete="name" />
+                <span class="field-error" id="nombreError"></span>
+              </div>
+              <div class="form-group">
+                <label for="email">Correo electrónico <span class="req">*</span></label>
+                <input type="email" id="email" name="email" placeholder="tu@correo.com" autocomplete="email" />
+                <span class="field-error" id="emailError"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="telefono">Teléfono / WhatsApp <span class="req">*</span></label>
+                <input type="tel" id="telefono" name="telefono" placeholder="+503 7000-0000" autocomplete="tel" />
+                <span class="field-error" id="telefonoError"></span>
+              </div>
+              <div class="form-group">
+                <label for="personas">Número de personas <span class="req">*</span></label>
+                <select id="personas" name="personas">
+                  <option value="">Seleccionar</option>
+                  <option value="1">1 persona</option>
+                  <option value="2">2 personas</option>
+                  <option value="3">3 personas</option>
+                  <option value="4">4 personas</option>
+                  <option value="5+">5 o más personas</option>
+                </select>
+                <span class="field-error" id="personasError"></span>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="checkin">Fecha de llegada <span class="req">*</span></label>
+                <input type="date" id="checkin" name="checkin" />
+                <span class="field-error" id="checkinError"></span>
+              </div>
+              <div class="form-group">
+                <label for="checkout">Fecha de salida <span class="req">*</span></label>
+                <input type="date" id="checkout" name="checkout" />
+                <span class="field-error" id="checkoutError"></span>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="alojamiento">Tipo de alojamiento preferido <span class="req">*</span></label>
+              <select id="alojamiento" name="alojamiento">
+                <option value="">Seleccionar tipo</option>
+                <option value="glamping">🏕️ Glamping Volcán Santa Ana</option>
+                <option value="cabana">🏡 Cabaña en los Cafetales</option>
+                <option value="boutique">🏨 Suite Artesanal Boutique</option>
+                <option value="hostal">🌊 Hostal Frente al Mar</option>
+                <option value="consultar">💬 Quiero que me asesoren</option>
+              </select>
+              <span class="field-error" id="alojamientoError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="mensaje">Mensaje o solicitudes especiales</label>
+              <textarea id="mensaje" name="mensaje" rows="4" placeholder="Cuéntanos sobre tu viaje ideal, alergias alimenticias, celebraciones especiales..."></textarea>
+              <span class="char-count" id="charCount">0 / 500</span>
+            </div>
+
+            <div class="form-group form-check">
+              <input type="checkbox" id="terminos" name="terminos" />
+              <label for="terminos">Acepto los <a href="#" class="link-underline">términos y condiciones</a> y la <a href="#" class="link-underline">política de privacidad</a> <span class="req">*</span></label>
+              <span class="field-error" id="terminosError"></span>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-full" id="submitBtn">
+              <span class="btn-text">Enviar Solicitud de Reserva</span>
+              <span class="btn-loader" style="display:none">Enviando...</span>
+            </button>
+          </form>
+
+          <!-- Mensaje de éxito -->
+          <div class="form-success" id="formSuccess" style="display:none">
+            <div class="success-icon">✓</div>
+            <h3>¡Solicitud enviada!</h3>
+            <p>Gracias por contactarnos. Revisaremos tu solicitud y te responderemos a <strong id="successEmail"></strong> en menos de 24 horas.</p>
+            <a href="#habitaciones" class="btn btn-outline">Ver más alojamientos</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════ FOOTER ═══════════════════ -->
+  <footer class="footer" id="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <a href="#hero" class="nav-logo footer-logo">
+              <span class="logo-icon">✦</span>
+              <span>Guanaco's<em>SV</em></span>
+            </a>
+            <p>La mejor red de alojamientos turísticos de El Salvador. Conectamos viajeros con la magia de nuestra tierra.</p>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Facebook">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="Instagram">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="WhatsApp">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              </a>
+              <a href="#" class="social-link" aria-label="TripAdvisor">
+                <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.006 4.295c-2.67 0-5.34.784-7.645 2.353H.868l1.935 1.934A5.866 5.866 0 0 0 1.016 12a5.98 5.98 0 0 0 5.975 5.975 5.953 5.953 0 0 0 4.243-1.753L12 17l.766.222A5.952 5.952 0 0 0 17.009 18a5.98 5.98 0 0 0 5.975-5.975 5.867 5.867 0 0 0-.786-2.939L24 7.15h-3.493a13.294 13.294 0 0 0-8.5-2.855zM6.99 8.05A3.975 3.975 0 0 1 10.966 12a3.975 3.975 0 0 1-3.975 3.975A3.975 3.975 0 0 1 3.016 12 3.975 3.975 0 0 1 6.99 8.05zm10.019 0A3.975 3.975 0 0 1 21.984 12a3.975 3.975 0 0 1-3.975 3.975A3.975 3.975 0 0 1 14.034 12a3.975 3.975 0 0 1 2.975-3.95zM6.99 9.65a2.35 2.35 0 1 0 .001 4.7A2.35 2.35 0 0 0 6.99 9.65zm10.019 0a2.35 2.35 0 1 0 0 4.7 2.35 2.35 0 0 0 0-4.7zM6.99 11.3a.7.7 0 1 1 0 1.4.7.7 0 0 1 0-1.4zm10.019 0a.7.7 0 1 1 0 1.4.7.7 0 0 1 0-1.4z"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <div class="footer-links">
+            <h4>Alojamientos</h4>
+            <ul>
+              <li><a href="#habitaciones">Glamping Volcánico</a></li>
+              <li><a href="#habitaciones">Cabañas Privadas</a></li>
+              <li><a href="#habitaciones">Hotel Boutique</a></li>
+              <li><a href="#habitaciones">Hostales de Playa</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Destinos</h4>
+            <ul>
+              <li><a href="#reserva">Volcán Santa Ana</a></li>
+              <li><a href="#reserva">La Libertad</a></li>
+              <li><a href="#reserva">Lago de Coatepeque</a></li>
+              <li><a href="#reserva">Ruta de las Flores</a></li>
+              <li><a href="#reserva">El Tunco</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-links">
+            <h4>Información</h4>
+            <ul>
+              <li><a href="#nosotros">Sobre nosotros</a></li>
+              <li><a href="#tarifas">Tarifas y planes</a></li>
+              <li><a href="#reserva">Reservaciones</a></li>
+              <li><a href="#">Política de cancelación</a></li>
+              <li><a href="#">Preguntas frecuentes</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>© <span id="year"></span> Guanaco's · Alojamientos Turísticos en El Salvador. Todos los derechos reservados.</p>
+        <p>Desarrollado con ❤️ para promover el turismo sostenible en El Salvador · <a href="mailto:queli1801@gmail.com">queli1801@gmail.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast de notificación -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
