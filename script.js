@@ -387,7 +387,7 @@ function sendByMailto({ nombre, email, telefono, personas, checkin, checkout, no
   const mensaje = document.getElementById('mensaje').value || 'Sin mensaje adicional.';
 
   const body = encodeURIComponent(
-    `NUEVA SOLICITUD DE RESERVA — Paraíso SV\n` +
+    `NUEVA SOLICITUD DE RESERVA — Guanacos's` +
     `${'='.repeat(45)}\n\n` +
     `Nombre:         ${nombre}\n` +
     `Email:          ${email}\n` +
@@ -399,10 +399,10 @@ function sendByMailto({ nombre, email, telefono, personas, checkin, checkout, no
     `Alojamiento:    ${alojaTexto}\n\n` +
     `Mensaje:\n${mensaje}\n\n` +
     `${'='.repeat(45)}\n` +
-    `Enviado desde: paraisosv.com`
+    `Enviado desde: queli1801@gmail.com`
   );
 
-  const subject = encodeURIComponent(`Reserva ParaísoSV — ${nombre} · ${formatDate(checkin)}`);
+  const subject = encodeURIComponent(`Reserva Guanacos's — ${nombre} · ${formatDate(checkin)}`);
   const mailtoLink = `mailto:queli1801@gmail.com?subject=${subject}&body=${body}`;
 
   // Abrir en nueva ventana para no interrumpir UX
@@ -622,7 +622,7 @@ if (heroBg && window.matchMedia('(min-width: 768px)').matches) {
    INIT — Log de bienvenida
 ════════════════════════════════════════ */
 console.log(
-  '%c✦ Paraíso SV %c— Alojamientos Turísticos en El Salvador',
+  '%c✦ Guanaco´s %c— Alojamientos Turísticos en El Salvador',
   'color:#c9a85c; font-size:16px; font-weight:bold;',
   'color:#4a7a4a; font-size:14px;'
 );
