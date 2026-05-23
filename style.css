@@ -1,15 +1,15 @@
 /* ═══════════════════════════════════════════════
    Guanaco's — CSS Principal
-   Estética: Lujo Natural · Tierra y Verde · Elegante
+   Estética: Lujo Natural · Paleta: Verdes, Dorados, Cremas
    ═══════════════════════════════════════════════ */
 
 /* ── Variables ── */
-:root {
+:root {   
   --verde-oscuro: #1a2e1a;
-  --verde-medio: #2d4a2d;
-  --verde-suave: #4a7a4a;
-  --verde-claro: #7aad6a;
-  --tierra: #8b6347;
+  --verde-medio: #2d3f4a;
+  --verde-suave: #232634;
+  --verde-claro: #cdeae5;
+  --tierra: #8bad70;
   --crema: #f5f0e8;
   --crema-oscuro: #ede5d4;
   --dorado: #c9a85c;
@@ -66,12 +66,12 @@ input, select, textarea, button { font-family: inherit; }
   font-family: var(--font-display);
   font-size: clamp(2rem, 4vw, 3.2rem);
   font-weight: 400;
-  line-height: 1.15;
+  line-height: 2.15;
   color: var(--verde-oscuro);
-  margin-bottom: 20px;
+  margin-bottom: 40px;
 }
 .section-title em { font-style: italic; color: var(--verde-suave); }
-.section-desc { color: var(--gris-text); font-size: 1.05rem; max-width: 560px; }
+.section-desc { color: var(--gris-text); font-size: clamp(1.125rem, 2.5vw, 1.25rem); max-width: 560px; }
 .section-header { text-align: center; margin-bottom: 64px; }
 .section-header .section-desc { margin: 0 auto; }
 .body-text { color: var(--gris-text); font-size: 1rem; line-height: 1.8; margin-bottom: 16px; }
@@ -233,7 +233,7 @@ input, select, textarea, button { font-family: inherit; }
   position: absolute;
   inset: 0;
   background:
-    url('img/expediav2-781223-0c12be-380848.jpg')
+    url('img/Hotel.jpg')
     center/cover no-repeat;
 }
 .hero-overlay {
@@ -523,7 +523,11 @@ input, select, textarea, button { font-family: inherit; }
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--radius-lg);
-  overflow: hidden;
+  /*overflow: hidden;*/
+  .room-img-wrap {
+  height: 260px;
+  overflow: hidden; /* la imagen no se desborda fuera del div */
+}
   transition: all var(--transition);
 }
 .room-card:hover {
@@ -857,7 +861,7 @@ input, select, textarea, button { font-family: inherit; }
   font-weight: 400;
   letter-spacing: 0;
   text-transform: none;
-  color: var(--gris-text);
+  color: var(--negro-text);
   cursor: pointer;
   line-height: 1.5;
 }
@@ -868,6 +872,9 @@ input, select, textarea, button { font-family: inherit; }
 #submitBtn { margin-top: 4px; font-size: 0.9rem; padding: 16px; }
 
 /* Éxito */
+.formSuccess {
+  display: none;
+}
 .form-success {
   text-align: center;
   padding: 48px 24px;
