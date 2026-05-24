@@ -272,8 +272,22 @@ if (form) {
 
 
 /* ════════════════════════════════════════
-   7. ENVÍO DEL FORMULARIO
+   7. ENVÍO DEL FORMULARIO — EmailJS + Gmail
 ════════════════════════════════════════ */
+
+const EMAILJS_PUBLIC_KEY       = 'Ah2DvzCnsHQ52bbOw';
+const EMAILJS_SERVICE_ID       = 'service_v5vkp4m';
+const EMAILJS_TEMPLATE_ID      = 'template_jzr1bm1';  // correo a queli1801@gmail.com
+const EMAILJS_TEMPLATE_ID_USER = 'template_mahq2xh';  // confirmación al solicitante
+
+// Cargar SDK de EmailJS dinámicamente
+(function loadEmailJS() {
+  const script = document.createElement('script');
+  script.src = 'https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js';
+  script.onload = () => emailjs.init({ publicKey: EMAILJS_PUBLIC_KEY });
+  document.head.appendChild(script);
+})();
+
 if (form) {
   form.addEventListener('submit', async (e) => {
     e.preventDefault();
@@ -310,59 +324,51 @@ if (form) {
       return;
     }
 
-    // Preparar datos del formulario
-    const submitBtn  = document.getElementById('submitBtn');
-    const btnText    = submitBtn.querySelector('.btn-text');
-    const btnLoader  = submitBtn.querySelector('.btn-loader');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText   = submitBtn.querySelector('.btn-text');
+    const btnLoader = submitBtn.querySelector('.btn-loader');
 
-    // Estado: cargando
-    submitBtn.disabled = true;
-    btnText.style.display  = 'none';
+    submitBtn.disabled      = true;
+    btnText.style.display   = 'none';
     btnLoader.style.display = 'inline';
 
-    // Calcular noches
-    const noches = calcularNoches(checkin, checkout);
+    const noches      = calcularNoches(checkin, checkout);
+    const alojaSelect = document.getElementById('alojamiento');
+    const alojaTexto  = alojaSelect.options[alojaSelect.selectedIndex].text;
+    const mensaje     = document.getElementById('mensaje').value || 'Sin mensaje adicional.';
 
-    // Construir los datos para enviar por Formspree (compatible con mailto)
-    const formData = new FormData();
-    formData.append('nombre',       nombre);
-    formData.append('email',        email);
-    formData.append('telefono',     telefono);
-    formData.append('personas',     personas);
-    formData.append('checkin',      formatDate(checkin));
-    formData.append('checkout',     formatDate(checkout));
-    formData.append('noches',       noches);
-    formData.append('alojamiento',  document.getElementById('alojamiento').options[document.getElementById('alojamiento').selectedIndex].text);
-    formData.append('mensaje',      document.getElementById('mensaje').value || 'Sin mensaje adicional.');
-    formData.append('_replyto',     email);
-    formData.append('_subject',     `Reserva ParaísoSV — ${nombre} · ${formatDate(checkin)}`);
-    formData.append('_to',          'queli1801@gmail.com');
+    // Parámetros compartidos por ambas plantillas
+    const templateParams = {
+      to_email:    'queli1801@gmail.com',
+      reply_to:    email,
+      nombre:      nombre,
+      email:       email,
+      telefono:    telefono,
+      personas:    personas,
+      checkin:     formatDate(checkin),
+      checkout:    formatDate(checkout),
+      noches:      noches,
+      alojamiento: alojaTexto,
+      mensaje:     mensaje,
+    };
 
     try {
-      // Enviar por Formspree (el endpoint ya tiene el correo configurado)
-      // Si no tienes cuenta Formspree, se hace uso de mailto como fallback
-      const response = await fetch('https://formspree.io/f/mjkwnvok', {
-        method: 'POST',
-        body: formData,
-        headers: { 'Accept': 'application/json' }
-      });
-
-      if (response.ok) {
-        onFormSuccess(email);
-      } else {
-        // Fallback: abrir cliente de correo
-        sendByMailto({ nombre, email, telefono, personas, checkin, checkout, noches, alojamiento });
-        onFormSuccess(email);
-      }
-
-    } catch (error) {
-      // Fallback sin conexión: abrir cliente de correo
-      sendByMailto({ nombre, email, telefono, personas, checkin, checkout, noches, alojamiento });
+      // Enviar ambos correos en paralelo
+      await Promise.all([
+        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID,      templateParams), // → queli1801@gmail.com
+        emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID_USER,  templateParams), // → solicitante
+      ]);
       onFormSuccess(email);
-      
+
+    } catch (err) {
+      console.error('EmailJS error:', err);
+      // Fallback: abrir cliente de correo local
+      sendByMailto({ nombre, email, telefono, personas, checkin, checkout, noches, alojamiento: alojaTexto });
+      onFormSuccess(email);
+
     } finally {
-      submitBtn.disabled = false;
-      btnText.style.display  = 'inline';
+      submitBtn.disabled      = false;
+      btnText.style.display   = 'inline';
       btnLoader.style.display = 'none';
     }
   });
