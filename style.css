@@ -5,11 +5,11 @@
 
 /* ── Variables ── */
 :root {   
-  --verde-oscuro: #1a2e1a;
-  --verde-medio: #2d3f4a;
-  --verde-suave: #232634;
-  --verde-claro: #cdeae5;
-  --tierra: #8bad70;
+   --verde-oscuro: #1a2e1a;
+  --verde-medio: #2d4a2d;
+  --verde-suave: #4a7a7a;
+  --verde-claro: #7aad6a;
+  --tierra: #8b6347;
   --crema: #f5f0e8;
   --crema-oscuro: #ede5d4;
   --dorado: #c9a85c;
@@ -45,7 +45,7 @@ body {
   overflow-x: hidden;
 }
 
-img { display: block; width: 100%; height: 100%; object-fit: cover; }
+img { display: block; width: 100%; height: auto; object-fit: cover; }
 a { color: inherit; text-decoration: none; }
 ul { list-style: none; }
 input, select, textarea, button { font-family: inherit; }
@@ -377,46 +377,35 @@ input, select, textarea, button { font-family: inherit; }
   align-items: center;
 }
 .img-stack {
-  position: relative;
-  height: 520px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 .img-card {
-  position: absolute;
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow);
 }
-.img-card--main {
-  width: 75%;
-  height: 420px;
-  bottom: 0; left: 0;
-  z-index: 2;
-}
-.img-card--accent {
-  width: 58%;
-  height: 280px;
-  top: 0; right: 0;
-  z-index: 3;
-  border: 4px solid var(--crema);
+.img-card--main img,
+.img-card--accent img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
 }
 .img-float {
-  position: absolute;
-  bottom: 32px; right: 8%;
-  z-index: 4;
   background: var(--dorado);
   padding: 12px 20px;
   border-radius: var(--radius);
   display: flex;
-  flex-direction: column;
   align-items: center;
-  gap: 2px;
+  gap: 10px;
   box-shadow: var(--shadow);
 }
-.float-icon { font-size: 1.5rem; }
+.float-icon { font-size: 1.3rem; }
 .float-text {
-  font-size: 0.7rem;
+  font-size: 0.75rem;
   font-weight: 600;
-  letter-spacing: 0.1em;
+  letter-spacing: 0.08em;
   text-transform: uppercase;
   color: var(--verde-oscuro);
 }
@@ -523,11 +512,7 @@ input, select, textarea, button { font-family: inherit; }
   background: rgba(255,255,255,0.06);
   border: 1px solid rgba(255,255,255,0.1);
   border-radius: var(--radius-lg);
-  /*overflow: hidden;*/
-  .room-img-wrap {
-  height: 260px;
-  overflow: hidden; /* la imagen no se desborda fuera del div */
-}
+  overflow: hidden;
   transition: all var(--transition);
 }
 .room-card:hover {
@@ -540,8 +525,11 @@ input, select, textarea, button { font-family: inherit; }
   height: 260px;
   overflow: hidden;
 }
-.room-img-wrap img { transition: transform 0.6s ease; }
-.room-card:hover .room-img-wrap img { transform: scale(1.06); }
+.room-img-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .room-badge {
   position: absolute;
   top: 16px; left: 16px;
@@ -1000,7 +988,7 @@ input, select, textarea, button { font-family: inherit; }
 
 @media (max-width: 900px) {
   .nosotros-grid { grid-template-columns: 1fr; }
-  .img-stack { height: 360px; margin-bottom: 32px; }
+  .img-stack { margin-bottom: 32px; }
   .rooms-grid { grid-template-columns: 1fr; }
   .tarifas-grid { grid-template-columns: 1fr; max-width: 460px; margin: 0 auto; }
   .reserva-grid { grid-template-columns: 1fr; }

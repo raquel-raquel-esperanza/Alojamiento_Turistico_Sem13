@@ -359,6 +359,7 @@ if (form) {
       // Fallback sin conexión: abrir cliente de correo
       sendByMailto({ nombre, email, telefono, personas, checkin, checkout, noches, alojamiento });
       onFormSuccess(email);
+      
     } finally {
       submitBtn.disabled = false;
       btnText.style.display  = 'inline';
@@ -589,13 +590,7 @@ const lazyImages = document.querySelectorAll('img[loading="lazy"]');
 const imageObserver = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      const img = entry.target;
-      img.style.transition = 'opacity 0.5s ease';
-      img.style.opacity    = '0';
-      img.addEventListener('load', () => {
-        img.style.opacity = '1';
-      });
-      imageObserver.unobserve(img);
+      imageObserver.unobserve(entry.target);
     }
   });
 }, { rootMargin: '200px' });
